@@ -1,0 +1,22 @@
+﻿<Window x:Class="VisualDemoex.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VisualDemoex"
+        mc:Ignorable="d"
+        Title="Попрыжонок" Height="450" Width="800" Icon="Resources/Попрыженок.ico">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <Image Source="Resources/Попрыженок.png" HorizontalAlignment="Left"></Image>
+        <TextBlock Text="Попрыженок" FontSize="30" FontFamily="Comic Sans MS" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <Grid Background="#43DCFE" Panel.ZIndex="-1"></Grid>
+        <Grid Background="#F9969E" Grid.Row="2"></Grid>
+        <Button Name="BtnBack" Click="BtnBack_Click" Content="Назад" HorizontalAlignment="Right"></Button>
+        <Frame Grid.Row="1" Name="MainFrame" ContentRendered="MainFrame_ContentRendered" NavigationUIVisibility="Hidden"></Frame>
+    </Grid>
+</Window>
