@@ -13,7 +13,7 @@
             <StackPanel Orientation="Vertical">
                 <StackPanel Orientation="Horizontal">
                     <TextBox Name="TextSearch" Width="300" Height="30" TextChanged="TextSearch_TextChanged" Margin="5"></TextBox>
-                    <ComboBox Name="CbSort" Width="140" Height="30" Margin="5"></ComboBox>
+                    <ComboBox Name="CbSort" Width="140" Height="30" Margin="5" FontFamily="18"></ComboBox>
                     <ComboBox Name="CbFilter" Width="140" Height="30" Margin="5"></ComboBox>
                 </StackPanel>
                 <ListBox Name="AgentList" Background="Transparent" Width="700" BorderBrush="Transparent" Margin="5"> 
