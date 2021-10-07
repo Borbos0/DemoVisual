@@ -28,7 +28,7 @@ namespace VisualDemoex
 
         private void TextSearch_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            
         }
     }
 }
