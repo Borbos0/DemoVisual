@@ -42,13 +42,14 @@
                                         </StackPanel>
                                         <StackPanel Orientation="Horizontal" Grid.Column="1">
                                             <TextBlock Text="{Binding AgentType.Title}" Style="{StaticResource AgentFormat}"></TextBlock>
+                                            <TextBlock Text=" | " Style="{StaticResource AgentFormat}"></TextBlock>
                                             <TextBlock Name="TxtNameAgent" Text="{Binding Title}" Style="{StaticResource AgentFormat}"></TextBlock>
                                         </StackPanel>
                                         <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="1">
                                             <TextBlock Text="10 продаж за год" Style="{StaticResource AgentFormat}"></TextBlock>
                                         </StackPanel>
                                         <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="2">
-                                            <TextBlock Text="{Binding AgentType.Phone}" Style="{StaticResource AgentFormat}"></TextBlock>
+                                            <TextBlock Text="{Binding AgentType.Phone }" Style="{StaticResource AgentFormat}"></TextBlock>
                                             <TextBlock Text="{Binding Phone}" Style="{StaticResource AgentFormat}"></TextBlock>
                                         </StackPanel>
                                         <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.Column="1">

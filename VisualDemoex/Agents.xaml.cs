@@ -24,11 +24,14 @@ namespace VisualDemoex
         {
             InitializeComponent();
             AgentList.ItemsSource = Db.demoForVisualEntities.Agent.ToList();
+            CbFilter.Items.Add("По типу");
+            CbSort.Items.Add("От А до Я");
+            CbSort.Items.Add("От Я до А");
         }
 
         private void TextSearch_TextChanged(object sender, TextChangedEventArgs e)
         {
-            
+            AgentList.ItemsSource = Db.demoForVisualEntities.Agent.Where(x => x.Title.StartsWith(TextSearch.Text)).ToList();
         }
     }
 }
