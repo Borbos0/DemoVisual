@@ -34,7 +34,7 @@ namespace VisualDemoex
                 case 0: 
                     break;
                 case 1:
-                    AgentList.ItemsSource = Db.demoForVisualEntities.Agent.OrderBy(x => x.Title);
+                    AgentList.ItemsSource = Db.demoForVisualEntities.Agent.OrderBy(x => x.Title.ToList());
                     break;
                 case 2:
                     AgentList.ItemsSource = Db.demoForVisualEntities.Agent.OrderByDescending(x => x.Title);
