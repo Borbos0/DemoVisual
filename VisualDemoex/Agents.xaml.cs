@@ -24,8 +24,8 @@ namespace VisualDemoex
         {
             InitializeComponent();
             AgentList.ItemsSource = Db.demoForVisualEntities.Agent.ToList();
-            CbFilter.Items.Add("Фильтрация");
-            CbFilter.Items.Add("По типу");
+            CbFilter.Items.Add("Все типы");
+            CbFilter.Items.Add("Тип А");
             CbSort.Items.Add("Сортировка");
             CbSort.Items.Add("От А до Я");
             CbSort.Items.Add("От Я до А");
@@ -62,6 +62,11 @@ namespace VisualDemoex
         private void BtnEdit_Click(object sender, RoutedEventArgs e)
         {
             Admin.MainFrame.Navigate(new AgentEdit());
+        }
+
+        private void BtnDel_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

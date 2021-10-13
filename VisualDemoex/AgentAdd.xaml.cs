@@ -23,6 +23,7 @@ namespace VisualDemoex
         public AgentAdd()
         {
             InitializeComponent();
+            CmbBox.ItemsSource = Db.demoForVisualEntities.AgentType.ToList();
         }
     }
 }

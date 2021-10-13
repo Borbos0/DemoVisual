@@ -14,6 +14,7 @@
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
         <Button Content="Добавить" Grid.Row="1" HorizontalAlignment="Left" Name="BtnAdd" Click="BtnAdd_Click"></Button>
+        <Button Content="Удалить" Grid.Row="1" HorizontalAlignment="Right" Name="BtnDel" Click="BtnDel_Click"></Button>
         <Button Content="Изменить" Grid.Row="1" Name="BtnEdit" Click="BtnEdit_Click"></Button>
         <ScrollViewer Grid.Row="0">
             <StackPanel Orientation="Vertical">

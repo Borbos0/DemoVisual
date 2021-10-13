@@ -96,6 +96,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelAgents.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\Agent.cs" />
+    <Compile Include="Model\AgentType.cs" />
     <Compile Include="Product.cs">
       <DependentUpon>ModelAgents.tt</DependentUpon>
     </Compile>

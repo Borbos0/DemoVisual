@@ -20,5 +20,30 @@
             <Setter Property="FontSize" Value="18"/>
             <Setter Property="Foreground" Value="Black"/>
         </Style>
+        <Style TargetType="TextBlock" x:Key="AddMenu">
+            <Setter Property="FontFamily" Value="Comic Sans MS"></Setter>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="HorizontalAlignment" Value="Right"></Setter>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Width" Value="350"></Setter>
+            <Setter Property="Height" Value="40"></Setter>
+            <Setter Property="HorizontalAlignment" Value="Left"></Setter>
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="FontFamily" Value="Comic Sans MS"></Setter>
+            <Setter Property="FontSize" Value="26"/>
+            <Setter Property="Foreground" Value="Black"/>
+        </Style>
+        <Style TargetType="ComboBox">
+            <Setter Property="Width" Value="350"></Setter>
+            <Setter Property="Height" Value="40"></Setter>
+            <Setter Property="HorizontalAlignment" Value="Left"></Setter>
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="FontFamily" Value="Comic Sans MS"></Setter>
+            <Setter Property="FontSize" Value="26"/>
+            <Setter Property="Foreground" Value="Black"/>
+        </Style>
     </Application.Resources>
 </Application>
