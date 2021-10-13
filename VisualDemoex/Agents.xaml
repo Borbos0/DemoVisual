@@ -9,14 +9,20 @@
       Title="Agents">
 
     <Grid>
-        <ScrollViewer>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="14*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <Button Content="Добавить" Grid.Row="1" HorizontalAlignment="Left" Name="BtnAdd" Click="BtnAdd_Click"></Button>
+        <Button Content="Изменить" Grid.Row="1" Name="BtnEdit" Click="BtnEdit_Click"></Button>
+        <ScrollViewer Grid.Row="0">
             <StackPanel Orientation="Vertical">
                 <StackPanel Orientation="Horizontal">
                     <TextBox Name="TextSearch" Width="300" Height="30" TextChanged="TextSearch_TextChanged" Margin="5" FontFamily="Comic Sans MS" FontSize="18"></TextBox>
                     <ComboBox Name="CbSort" Width="140" Height="30" Margin="5" FontFamily="Comic Sans MS" FontSize="18" SelectedIndex="0"/>
                     <ComboBox Name="CbFilter" Width="140" Height="30" Margin="5" FontFamily="Comic Sans MS" FontSize="18" SelectedIndex="0"></ComboBox>
                 </StackPanel>
-                <ListBox Name="AgentList" Background="Transparent" Width="620" BorderBrush="Transparent" Margin="5"> 
+                <ListBox Name="AgentList" Background="Transparent" Width="620" BorderBrush="Transparent" Margin="5">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <Border BorderBrush="Black" BorderThickness="2">
@@ -39,6 +45,9 @@
                                         <StackPanel Orientation="Vertical" Grid.Column="0" Grid.RowSpan="3">
                                             <TextBlock Name="ImgAgent" Visibility="Hidden" Text="{Binding Logo, StringFormat=..{0}}"></TextBlock>
                                             <Image Source="{Binding Text, ElementName=ImgAgent}" Style="{StaticResource ImgAgent}"></Image>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Vertical" HorizontalAlignment="Right" Grid.Column="2" Grid.RowSpan="3">
+                                            <TextBlock Text="10%" Margin="0,15,25,0" FontSize="30" Style="{StaticResource AgentFormat}"></TextBlock>
                                         </StackPanel>
                                         <StackPanel Orientation="Horizontal" Grid.Column="1">
                                             <TextBlock Text="{Binding AgentType.Title}" Style="{StaticResource AgentFormat}"></TextBlock>

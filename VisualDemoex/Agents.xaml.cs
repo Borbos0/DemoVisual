@@ -53,5 +53,15 @@ namespace VisualDemoex
         {
             AgentList.ItemsSource = Db.demoForVisualEntities.Agent.Where(x => x.Title.StartsWith(TextSearch.Text)).ToList();
         }
+
+        private void BtnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            Admin.MainFrame.Navigate(new AgentAdd());
+        }
+
+        private void BtnEdit_Click(object sender, RoutedEventArgs e)
+        {
+            Admin.MainFrame.Navigate(new AgentEdit());
+        }
     }
 }
