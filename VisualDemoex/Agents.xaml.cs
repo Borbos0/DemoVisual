@@ -39,7 +39,7 @@ namespace VisualDemoex
                 case 2:
                     AgentList.ItemsSource = Db.demoForVisualEntities.Agent.OrderByDescending(x => x.Title);
                     break;
-                default: 
+                default:
                     break;
             }
             
@@ -61,7 +61,7 @@ namespace VisualDemoex
 
         private void BtnEdit_Click(object sender, RoutedEventArgs e)
         {
-            Admin.MainFrame.Navigate(new AgentEdit());
+           // Admin.MainFrame.Navigate(new AgentAdd());
         }
 
         private void BtnDel_Click(object sender, RoutedEventArgs e)

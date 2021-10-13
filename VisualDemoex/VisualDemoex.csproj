@@ -70,9 +70,6 @@
     <Compile Include="AgentAdd.xaml.cs">
       <DependentUpon>AgentAdd.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AgentEdit.xaml.cs">
-      <DependentUpon>AgentEdit.xaml</DependentUpon>
-    </Compile>
     <Compile Include="AgentPriorityHistory.cs">
       <DependentUpon>ModelAgents.tt</DependentUpon>
     </Compile>
@@ -120,10 +117,6 @@
       <DependentUpon>ModelAgents.tt</DependentUpon>
     </Compile>
     <Page Include="AgentAdd.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="AgentEdit.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
