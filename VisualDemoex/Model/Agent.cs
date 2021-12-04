@@ -6,11 +6,21 @@ using System.Threading.Tasks;
 
 namespace VisualDemoex
 {
-    partial class Agent
+    public partial class Agent
     {
-        public override string ToString()
+        public string LogoView
         {
-            return Title;
+            get
+            {
+                if (String.IsNullOrEmpty(Logo) || String.IsNullOrWhiteSpace(Logo))
+                {
+                    return @"agents\picture.png";
+                }
+                else
+                {
+                    return Logo;
+                }
+            }
         }
     }
 }

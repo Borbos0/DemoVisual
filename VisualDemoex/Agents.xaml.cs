@@ -25,10 +25,17 @@ namespace VisualDemoex
             InitializeComponent();
             AgentList.ItemsSource = Db.demoForVisualEntities.Agent.ToList();
             CbFilter.Items.Add("Все типы");
-            CbFilter.Items.Add("Тип А");
+            foreach (var agentType in Db.demoForVisualEntities.AgentType)
+            {
+                CbFilter.Items.Add(agentType.Title);
+            }
+            CbFilter.SelectedIndex = 0;
+
             CbSort.Items.Add("Сортировка");
             CbSort.Items.Add("От А до Я");
             CbSort.Items.Add("От Я до А");
+            CbSort.SelectedIndex = 0;
+
             switch (CbSort.SelectedIndex)
             {
                 case 0: 
@@ -51,12 +58,12 @@ namespace VisualDemoex
         /// <param name="e"></param>
         private void TextSearch_TextChanged(object sender, TextChangedEventArgs e)
         {
-            AgentList.ItemsSource = Db.demoForVisualEntities.Agent.Where(x => x.Title.StartsWith(TextSearch.Text)).ToList();
+            FindAgents();
         }
 
         private void BtnAdd_Click(object sender, RoutedEventArgs e)
         {
-            Admin.MainFrame.Navigate(new AgentAdd());
+            Admin.MainFrame.Navigate(new AgentAdd(null));
         }
 
         private void BtnEdit_Click(object sender, RoutedEventArgs e)
@@ -66,7 +73,41 @@ namespace VisualDemoex
 
         private void BtnDel_Click(object sender, RoutedEventArgs e)
         {
+            if (MessageBox.Show("Вы действительно хотите удалить данные." + "\n" + "Предупреждение", "Вы уверены?", MessageBoxButton.YesNoCancel) == MessageBoxResult.Yes)
+            {
+                MessageBox.Show("Вы удалили запись!");
+            }
+        }
 
+        private void FindAgents()
+        {
+            List<Agent> agents = Db.demoForVisualEntities.Agent.Where(x => x.Title.StartsWith(TextSearch.Text)).ToList();
+
+            switch(CbSort.SelectedIndex)
+            {
+                case 0:; break;
+                case 1: agents = agents.OrderBy(x => x.Title).ToList(); break;
+                case 2: agents = agents.OrderByDescending(x => x.Title).ToList(); break;
+            }
+
+
+            if (CbFilter.SelectedIndex > 0)
+            {
+                string agentType = CbFilter.SelectedItem.ToString();
+                agents = agents.Where(x => x.AgentType.Title == agentType).ToList();
+            }
+
+            AgentList.ItemsSource = agents;
+        }
+
+        private void CbSort_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            FindAgents();
+        }
+
+        private void CbFilter_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            FindAgents();
         }
     }
 }

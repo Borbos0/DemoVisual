@@ -26,7 +26,7 @@ namespace VisualDemoex
             MainFrame.Navigate(new MainMenu());
             Admin.MainFrame = MainFrame;
             MinHeight = 350;
-            MinWidth = 700;
+            MinWidth = 920;
             MaxHeight = 1080;
             MaxWidth = 1920;
         }
