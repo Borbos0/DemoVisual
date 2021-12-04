@@ -1,4 +1,8 @@
-Иметь Microsoft Visual Studio 2019 года версии 16.8.5 и Microsoft SQL Server 18 версии 15.0.18369.0
+# Установка
+> Наличие <a href="https://visualstudio.microsoft.com/ru/">Microsoft Visual Studio</a> (не меньше 2019 года и версии не ниже 16.10.2).<br>
+Если у вас нет <a href="https://visualstudio.microsoft.com/ru/">Visual Studio</a> скачать с оффициального сайта
+
+Перейти на сайт игры (можно путем нажатия на картинку) скачать проект и запустить его у себя в Visual Studio
 1) Скачать скрипт базы данных и запустить его в Microsoft SQL Server (нажать зеленую кнопку выполнить)
 2) Запустить проект и нажать зеленую кнопку пуск в Microsoft Visual Studio 2019 <br>
 
